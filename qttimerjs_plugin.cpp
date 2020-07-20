@@ -13,7 +13,7 @@ void QtTimerJSPlugin::registerTypes(const char *uri) {
   qmlRegisterModule(uri, 1, 0);
 }
 
-QVariant TimerJS::setTimeout(const QVariant &handler, int delay,
+QVariant TimerJS::setTimeout(const QVariant &handler, int time,
                              bool singleShot) const {
   auto value = handler.value<QJSValue>();
 
@@ -38,13 +38,13 @@ QVariant TimerJS::setTimeout(const QVariant &handler, int delay,
   if (singleShot)
     timer->callOnTimeout(disconnect);
 
-  timer->start(delay + delay * 0.05);
+  timer->start(time);
 
   return QVariant::fromValue(disconnect);
 }
 
-QVariant TimerJS::setTimeout(const QVariant &handler, int delay) const {
-  return setTimeout(handler, delay, true);
+QVariant TimerJS::setTimeout(const QVariant &handler, int time) const {
+  return setTimeout(handler, time, true);
 }
 
 void TimerJS::clearTimeout(const QVariant &handler) const {
@@ -54,8 +54,8 @@ void TimerJS::clearTimeout(const QVariant &handler) const {
   }
 }
 
-QVariant TimerJS::setInterval(const QVariant &handler, int delay) const {
-  return setTimeout(handler, delay, false);
+QVariant TimerJS::setInterval(const QVariant &handler, int time) const {
+  return setTimeout(handler, time, false);
 }
 
 void TimerJS::clearInterval(const QVariant &handler) const {

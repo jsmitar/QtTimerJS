@@ -68,4 +68,16 @@ TestCase {
     print("STOP 10 intervals")
     wait(10)
   }
+
+  function test_precision() {
+    print("CALC PRECISION")
+    const timers = Array(10).fill(0)
+      .forEach((_, i) => {
+        const label = `${i}: setInterval ${i * 250}ms`
+        console.time(label)
+        setInterval(() => console.timeEnd(label), i * 250)
+      })
+
+    wait(10 * 250)
+  }
 }

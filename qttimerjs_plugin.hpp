@@ -90,7 +90,7 @@ public:
   inline QVariant setTimeout(const QVariant &handler, int delay,
                              bool singleShot) const;
 
-  Q_INVOKABLE QVariant setTimeout(const QVariant &handler, int delay) const;
+  Q_INVOKABLE QVariant setTimeout(const QVariant &handler, int time) const;
 
   Q_INVOKABLE void clearTimeout(const QVariant &handler) const;
 
