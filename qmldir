@@ -1,0 +1,2 @@
+module org.jsmitar.timerjs
+plugin QtTimerJS
