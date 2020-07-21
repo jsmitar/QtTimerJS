@@ -1,0 +1,22 @@
+{
+  "$schema": "https://www.qt.io/schema/extension-schema-v1?hsLang=en",
+  "title": "JS Timer Events",
+  "authors": ["Smith AR"],
+  "licenses": [
+    {
+      "licenseType": "MIT",
+      "licenseUrl": "https://github.com/jsmitar/QtTimerJS/blob/master/LICENSE"
+    }
+  ],
+  "version": "1.0",
+  "extensionType": ["library"],
+  "qtVersions": ["5.11-or-later"],
+  "contact": "https://github.com/jsmitar/QtTimerJS/issues",
+  "support": "https://github.com/jsmitar/QtTimerJS/issues",
+  "bugUrl": "https://github.com/jsmitar/QtTimerJS/issues",
+  "created": "2020-07-20",
+  "platforms": ["Linux", "Windows 10", "macOS 10.14"],
+  "sourceRepoUrl": "https://github.com/jsmitar/QtTimerJS",
+  "dependencies": ["Qt5Qml", "Qt5Quick", "Qt5Test optional"],
+  "price": { "listprice": 0 }
+}
